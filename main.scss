@@ -1,0 +1,200 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$white: {{ site.data.visuals.colors.white }};
+$yellow: {{ site.data.visuals.colors.yellow }};
+$pink: {{ site.data.visuals.colors.pink }};
+$blue: {{ site.data.visuals.colors.blue }};
+$lilac: {{ site.data.visuals.colors.lilac }};
+$purple: {{ site.data.visuals.colors.purple }};
+$key: {{ site.data.visuals.colors.key }};
+
+$small-breakpoint: 400px;
+$large-breakpoint: 570px; //767px;
+$page-bg-breakpoint: 1080px;
+
+$content-width: 570px;
+
+* {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: $key;
+  };
+}
+
+html {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: $key;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  background: $lilac;
+}
+
+p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+  & + & {
+    margin-top: 0;
+  }
+}
+
+h1, h2, h3, h4, div.subtitle, .button, b {
+  font-weight: 900;
+  text-align: center;
+}
+h1, h2, h3, h4, div.subtitle {
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: 0.1em;
+}
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+div.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+.button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+#container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  background: $white;
+  @media (min-width: $page-bg-breakpoint) {
+    max-width: 1080px;
+    box-shadow: 1rem 1rem 0 $purple;
+    margin-bottom: 3rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  background: $white;
+  @media (max-width: $large-breakpoint) {
+    flex-flow: column nowrap;
+    align-items: stretch;
+  }
+  background-color: $white;
+
+  /*&:nth-last-child(2) {
+    flex-grow: 1;
+  }*/
+}
+
+div.section-content {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 1 $content-width;
+  margin: 2rem 1rem;
+  @media (max-width: $large-breakpoint) {
+    flex: 0 0 auto;
+    margin-bottom: 0rem;
+    & + div.section-content {
+      margin-top: 1rem;
+    }
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+$hero-w: 2160px;
+$hero-h: 1080px;
+
+section.section-hero {
+  min-height: $hero-h/2;
+  background: url("assets/hero.jpg") center/auto 100% no-repeat, $white;
+  filter: grayscale(20%);
+  align-items: stretch;
+
+  div.section-content {
+    max-width: 570px;
+    margin: 0;
+    padding-top: 160px + 10px;
+    padding-bottom: 190px + 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1 0 auto;
+  }
+
+  svg {
+    fill: $key;
+    width: 8rem;
+    margin: 1rem;
+  }
+}
+
+.button {
+  $button-z: 0.4rem;
+  display: block;
+
+  text-decoration: none;
+  color: $white;
+
+  position: relative;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+
+  /*margin-top: 0;
+  margin-bottom: $button-z;*/
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    background-color: $blue;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 $button-z 0 $key;
+  }
+
+  &:hover {
+    color: $white;
+    padding-top: 0.7rem + $button-z/2;
+    padding-bottom: 0.7rem - $button-z/2;
+  }
+  &:hover::before {
+    transform: translate(0, $button-z/2);
+    box-shadow: 0 $button-z/2 0 $key;
+  }
+}
+
