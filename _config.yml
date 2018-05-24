@@ -24,5 +24,5 @@ whitelist:
   - jekyll-redirect-from
 
 collections:
-  sessions:
+  events:
     output: false

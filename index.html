@@ -13,7 +13,10 @@ redirect_from:
     <div class='section-content'>
       <h1>Project Alpha</h1>
       <div class='subtitle'>Powering the next breakout story</div>
-      {% include wordmark-seedplus.svg %}
+      <div class='hbox'>
+        {% include wordmark-seedplus.svg %}
+        {% include wordmark-aws.svg %}
+      </div>
       <a class='button' href='#events'>Join in the fun</a>
     </div>
   </section>
@@ -23,9 +26,72 @@ redirect_from:
       <h2>What's this?</h2>
       
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisi at urna fringilla ornare maximus sed lectus. Praesent sed nulla scelerisque, egestas magna et, malesuada elit. Vestibulum rutrum libero non lacinia vestibulum. Nam id lacus et risus aliquet suscipit et in erat.</p>
-      <p>Vivamus pretium diam at porttitor vulputate. Maecenas vulputate hendrerit quam, sit amet vehicula justo lacinia eget. Donec interdum placerat tortor, non lobortis ligula scelerisque quis. Vestibulum sapien magna, feugiat ac est in, dictum volutpat ex.
-      </p>
+      <p>Vivamus pretium diam at porttitor vulputate. Maecenas vulputate hendrerit quam, sit amet vehicula justo lacinia eget. Donec interdum placerat tortor, non lobortis ligula scelerisque quis. Vestibulum sapien magna, feugiat ac est in, dictum volutpat ex.</p>
+      <ul>
+        <li>Access to business and technical experts from AWS and SeedPlus</li>
+        <li>USD 25,000 Activate portfolio package from AWS</li>
+        <li>Recognition in the market as one of the best early stage start-ups in ASEAN</li>
+        <li>Potential seed round funding from SeedPlus</li>
       </ul>
+      <div class='hbox'>
+        {% include wordmark-seedplus.svg %}
+        {% include wordmark-aws.svg %}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class='section-content section-events' id='events'>
+      {% for event in site.events %}
+      <div class='event'>
+        <div class='image' style='background-image: url({{ event.image | prepend: '/assets/' }});'></div>
+        <h2>{{ event.name }}</h2>
+        <div class='subtitle'>{{ event.date | date: "%e %B" }} at {{ event.venue }}</div>
+        <p>{{ event.output }}</p>
+        <div class='hbox'>
+        {% case event.state %}
+        {% when 'upcoming' %}
+          <a class='outbound button' href='{{ event.signup_url }}'>Attend the event</a>
+          <div class='button button-disabled'>Submit pitch</div>
+        {% when 'submitting' %}
+          <div class='button button-disabled'>Attend the event</div>
+          <a class='outbound button button-highlight' href='{{ event.submission_url }}'>Submit pitch</a>
+        {% when 'over' %}
+          <div class='button button-disabled'>Attend the event</div>
+          <div class='button button-disabled'>Submit pitch</div>
+        {% else %}
+          {% include UNHANDLED_EVENT_STATE_CASE %}
+        {% endcase %}
+        </div>
+      </div>
+      {% endfor %}
+      <div class='announcement'>
+        <h2>Finalists announced</h2>
+        <div class='subtitle'>29 October, right here</div>
+        <p>Post application, five start-ups from across the four cities will be shortlisted as finalists and recognised as one of the best early stage start-ups in ASEAN. These start-ups will be assigned two primary mentors for three months, one each from AWS and SeedPlus, and be given access to business and technical experts from AWS and SeedPlus.</p>
+
+        <p>All finalists will be on-boarded to AWS and given a USD 25,000 Activate portfolio package. AWS will also provide mentorship on well architected and SA best practices, security and AWS strategic services in AI / ML / KRADL / IOT topics.</p>
+
+        <p>The dedicated SeedPlus partner will work with the finalists on issues ranging from strategy and business development to product and recruitment to support the founders in building sustainable businesses. SeedPlus will also consider investing seed funding at the conclusion of the process.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class='section-content'>
+      <h2>How to pitch</h2>
+      <p>Vivamus pretium diam at porttitor vulputate. Maecenas vulputate hendrerit quam, sit amet vehicula justo lacinia eget. Donec interdum placerat tortor, non lobortis ligula scelerisque quis. Vestibulum sapien magna, feugiat ac est in, dictum volutpat ex.</p>
+      <p>There's also some very objective eligibility criteria:</p>
+      <ul>
+        <li>HQ or main operations must be in a Project Alpha city</li>
+        <li>Raised a maximum of US$XXX before</li>
+        <li>Submit a 5 page PDF deck in English using the provided pitch deck template.</li>
+        <li>All applications submitted after the closing date will not be reviewed.</li>
+      </ul>
+      <div class='hbox'>
+        <a class='outbound button' href='https://docs.google.com/presentation/d/1bFMEVYBphQ_ZYSHdiFxHCLJ3ACE_lM8LS7okv2sRiTg'>Download template</a>
+        <a class='outbound button button-highlight' href='https://airtable.com/shrSu9BbRGjGAPLYz'>Submit pitch deck</a>
+      </div>
     </div>
   </section>
 </div>
