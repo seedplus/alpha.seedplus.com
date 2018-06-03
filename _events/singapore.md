@@ -5,6 +5,6 @@ date: 2018-10-05
 venue: MBS, skybar
 address: |-
   Bring swimwear
-state: upcoming
+state: tbd
 submission_url: https://airtable.com/shrSu9BbRGjGAPLYz?prefill_City=Singapore
 --- 

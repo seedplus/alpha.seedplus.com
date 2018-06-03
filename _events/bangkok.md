@@ -6,6 +6,6 @@ venue: The Grande Sukhumvit
 address: |-
   Between Soi Asok and Sukhumvit soi 23
   Bring apples
-state: upcoming
+state: tbd
 submission_url: https://airtable.com/shrSu9BbRGjGAPLYz?prefill_City=Bangkok
 --- 

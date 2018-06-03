@@ -43,13 +43,18 @@ redirect_from:
   <section>
     <div class='section-content section-events' id='events'>
       {% for event in site.events %}
-      <div class='event'>
+      <div class='event{% if event.state == 'tbd' %} event-small{% endif %}'>
         <div class='image' style='background-image: url({{ event.image | prepend: '/assets/' }});'></div>
         <h2>{{ event.name }}</h2>
+        {% if event.state == 'tbd' %}
+        <div class='subtitle'>In {{ event.date | date: "%B" }}</div>
+        {% else %}
         <div class='subtitle'>{{ event.date | date: "%e %B" }} at {{ event.venue }}</div>
+        {% endif %}
         <p>{{ event.output }}</p>
         <div class='hbox'>
         {% case event.state %}
+        {% when 'tbd' %}
         {% when 'upcoming' %}
           <a class='outbound button' href='{{ event.signup_url }}'>Attend the event</a>
           <div class='button button-disabled'>Submit pitch</div>

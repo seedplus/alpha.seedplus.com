@@ -62,7 +62,7 @@ p {
   }
 }
 
-h1, h2, h3, h4, div.subtitle, .button, b {
+h1, h2, h3, h4, div.subtitle, .button, b, input[type="email"] {
   font-weight: 900;
   text-align: center;
 }
@@ -77,12 +77,18 @@ h1 {
 h2 {
   font-size: 1.8rem;
 }
+div.subtitle, .button, input[type="email"] {
+  font-size: 1rem;
+}
 div.subtitle {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
 .button {
   text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+input[type="email"] {
   letter-spacing: 0.15em;
 }
 
@@ -137,14 +143,15 @@ div.section-content {
 div.section-content.section-events {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0;
   //flex: 0 1 calc(#{$content-width} + 4rem);
   $events-width: $page-bg-breakpoint;
+  //$events-width: $content-width;
   flex: 0 1 $events-width;
 
   div.event {
-    flex: 1 0 $events-width/2;
+    flex: 1 1 $events-width/2;
     display: flex;
     flex-flow: column nowrap;
     margin-top: 1rem;
@@ -154,7 +161,7 @@ div.section-content.section-events {
       align-self: stretch;
       flex: 0 0 auto;
       padding-bottom: 100%;
-      background-size: 140%;
+      background-size: 100%;
       background-position: center;
     }
     h1, h2, h3, h4, div.subtitle, p, div.hbox {
@@ -163,17 +170,26 @@ div.section-content.section-events {
     }
     div.hbox {
       align-self: stretch;
-      margin-top: auto;
-      align-content: flex-end;
+    }
+    &.event-small {
+      flex: 1 0 $events-width/2;
     }
   }
 
-  div.announcement {
-    margin: 2rem;
+  div.signup, div.announcement {
+    margin: 1rem 0;
     padding: 2rem;
+    flex: 0 1 $content-width;
+    margin-top: 1rem;
+  }
+
+  div.signup {
+    border: 1px solid $key;
+  }
+
+  div.announcement {
     color: white;
     background-color: $purple;
-    flex: 1 0 $content-width;
   }
 
   counter-reset: event 0;
@@ -211,14 +227,13 @@ section:nth-last-of-type(1) > div.section-content {
 $hero-w: 2160px;
 $hero-h: 1080px;
 
-div.hbox {
+.hbox {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
 }
-
   
 svg.logo {
   fill: $key;
@@ -234,38 +249,41 @@ svg.aws-wordmark {
 
 section.section-hero {
   min-height: $hero-h/2;
-  background: url("assets/hero.jpg") center/auto 100% no-repeat, $white;
-  filter: grayscale(20%);
+  background: url("assets/hero.svg") center/cover no-repeat, $white;
   align-items: stretch;
 
   div.section-content {
     max-width: 570px;
     margin: 0;
     padding-top: 160px + 10px;
-    padding-bottom: 190px + 10px;
+    padding-bottom: 180px + 10px;
     padding-left: 1rem;
     padding-right: 1rem;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex: 0 0 auto;
   }
 
   svg.seedplus-wordmark {
     width: 5rem;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
   }
   svg.aws-wordmark {
     width: 2.5rem;
-    margin: 1rem;
+    margin: 0.5rem 1rem;
   }
 }
 
-.button {
+/* Resets */
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.button, input[type="email"] {
   display: block;
 
   text-decoration: none;
-  ;
-  color: $white;
 
   position: relative;
   padding-top: 0.7rem;
@@ -275,11 +293,27 @@ section.section-hero {
   z-index: 0;
 
   margin-bottom: 1rem;
-  & + .button {
+  & + .button, input[type="email"] {
     margin-left: 1rem;
   }
+}
 
+input[type="email"] {
+  border: 1px solid $key;
+  box-shadow: inset 0 1px #9B9B9B, 0 $button-z/2 0 $key;
+  border-radius: 0.5rem;
+
+  margin-bottom: 1rem - $button-z/2;
+  //margin-top: $button-z/2;
+  &::placeholder {
+    color: $key;
+    text-transform: uppercase;
+  }
+}
+
+.button, input[type="submit"] {
   &::before {
+    color: $white;
     content: '';
     position: absolute;
     left: 0;
@@ -288,9 +322,8 @@ section.section-hero {
     bottom: 0;
     z-index: -1;
 
-    background-color: $blue;
     border-radius: 0.5rem;
-
+    background-color: $blue;
     box-shadow: 0 $button-z 0 $key;
   }
 
@@ -315,23 +348,6 @@ section.section-hero {
     transform: translate(0, $button-z/2);
     box-shadow: 0 $button-z/2 0 $key;
   }
-  /*&.button-small-light {
-    background-color: transparent;
-    border: 1px solid $primary-blue;
-    color: $primary-blue;
-    &:hover {
-      background-color: transparent;
-      color: $accent-cyan;
-      border: 1px solid $accent-cyan;
-    }
-  }
-  &::after {
-    content: '\00A0\25B6\FE0E';
-  }
-  #contact & {
-    align-self: flex-start;
-    margin: .5rem 0;
-  }*/
 }
 
 /* ul.grid {
