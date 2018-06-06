@@ -10,6 +10,7 @@ $blue: {{ site.data.visuals.colors.blue }};
 $lilac: {{ site.data.visuals.colors.lilac }};
 $purple: {{ site.data.visuals.colors.purple }};
 $key: {{ site.data.visuals.colors.key }};
+$gray: #9B9B9B;
 
 $small-breakpoint: 400px;
 $large-breakpoint: 570px; //767px;
@@ -27,7 +28,7 @@ $button-z: 0.4rem;
 a {
   color: inherit;
   &:hover {
-    color: $key;
+    color: $gray;
   };
 }
 
@@ -53,23 +54,26 @@ body {
   background: $lilac;
 }
 
-p {
+p, ul {
   margin-top: 0.2rem;
   margin-bottom: 0.6rem;
-  line-height: 1.5;
+  line-height: 1.7;
   & + & {
     margin-top: 0;
   }
+  & + h3 {
+    margin-top: 1.5rem;
+  }
 }
 
-h1, h2, h3, h4, div.subtitle, .button, b, input[type="email"] {
+h1, h2, h3, .subtitle, .button, b, input[type="email"] {
   font-weight: 900;
   text-align: center;
 }
-h1, h2, h3, h4, div.subtitle {
+h1, h2, h3, .subtitle {
   letter-spacing: 0.05em;
-  margin-top: 0;
-  margin-bottom: 0.1em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 h1 {
   font-size: 2.8rem;
@@ -77,10 +81,10 @@ h1 {
 h2 {
   font-size: 1.8rem;
 }
-div.subtitle, .button, input[type="email"] {
+h3, .subtitle, .button, input[type="email"] {
   font-size: 1rem;
 }
-div.subtitle {
+h3, .subtitle {
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
@@ -130,10 +134,6 @@ div.section-content {
   padding: 1rem;
   @media (max-width: $large-breakpoint) {
     flex: 0 0 auto;
-    margin-bottom: 0rem;
-    & + div.section-content {
-      margin-top: 1rem;
-    }
     &:last-of-type {
       margin-bottom: 2rem;
     }
@@ -164,7 +164,7 @@ div.section-content.section-events {
       background-size: 100%;
       background-position: center;
     }
-    h1, h2, h3, h4, div.subtitle, p, div.hbox {
+    h1, h2, h3, h4, .subtitle, p, div.hbox {
       text-align: left;
       padding: 0 2rem;
     }
@@ -176,18 +176,11 @@ div.section-content.section-events {
     }
   }
 
-  div.signup, div.announcement {
+  div.announcement {
     margin: 1rem 0;
     padding: 2rem;
     flex: 0 1 $content-width;
     margin-top: 1rem;
-  }
-
-  div.signup {
-    border: 1px solid $key;
-  }
-
-  div.announcement {
     color: white;
     background-color: $purple;
   }
@@ -212,7 +205,7 @@ div.section-content.section-events {
       text-align: center;
       border-radius: 50%;
       background: $yellow;
-      box-shadow: 0 $button-z 0 $key;
+      box-shadow: 0 $button-z/2 0 $key;
     }
   }
 }
@@ -220,8 +213,11 @@ div.section-content.section-events {
 section:nth-of-type(2) > div.section-content {
   background: $blue;
 }
-section:nth-last-of-type(1) > div.section-content {
+section:nth-last-of-type(2) > div.section-content {
   background: $yellow;
+}
+section:nth-last-of-type(1) > div.section-content {
+  background: $white;
 }
 
 $hero-w: 2160px;
@@ -229,10 +225,13 @@ $hero-h: 1080px;
 
 .hbox {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
+  & + .hbox {
+    margin-top: 1rem;
+  }
 }
   
 svg.logo {
@@ -251,6 +250,11 @@ section.section-hero {
   min-height: $hero-h/2;
   background: url("assets/hero.svg") center/cover no-repeat, $white;
   align-items: stretch;
+
+  h1, .subtitle {
+    margin-top: 0;
+    margin-bottom: 0.1em;
+  }
 
   div.section-content {
     max-width: 570px;
@@ -280,6 +284,43 @@ input::-moz-focus-inner {
     padding: 0;
 }
 
+input[type="checkbox"] {
+  position: absolute;
+  left: -5000px;
+
+  & + label::before {
+    display: inline-block;
+    content: '\2713';
+    text-align: center;
+    height: 1em;
+    width: 1em;
+    background: $white;
+    color: $key;
+    border: 1px solid $key;
+    box-shadow: inset 0 1px $gray, 0 $button-z 0 $key;
+    border-radius: 0.5rem;
+    //margin-bottom: 1rem - $button-z/2;
+    margin-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  & + label:hover::before {
+    color: $gray;
+    transform: translate(0, $button-z/2);
+    box-shadow: 0 $button-z/2 0 $key;
+    //padding-top: 0.7rem + $button-z/2;
+    //padding-bottom: 0.7rem - $button-z/2;
+  }
+  &:not(:checked) + label:not(:hover)::before {
+    color: $white;
+  }
+  &:checked + label::before {
+    color: $key;
+  }
+}
+
 .button, input[type="email"] {
   display: block;
 
@@ -300,14 +341,14 @@ input::-moz-focus-inner {
 
 input[type="email"] {
   border: 1px solid $key;
-  box-shadow: inset 0 1px #9B9B9B, 0 $button-z/2 0 $key;
+  box-shadow: inset 0 1px $gray, 0 $button-z/2 0 $key;
   border-radius: 0.5rem;
 
   margin-bottom: 1rem - $button-z/2;
   //margin-top: $button-z/2;
   &::placeholder {
-    color: $key;
-    text-transform: uppercase;
+    color: $gray;
+    //text-transform: uppercase;
   }
 }
 
@@ -323,20 +364,22 @@ input[type="email"] {
     z-index: -1;
 
     border-radius: 0.5rem;
-    background-color: $blue;
+    background-color: $yellow;
     box-shadow: 0 $button-z 0 $key;
   }
 
   &.button-disabled {
     color: $key;
     &::before {
-      $gray: #9B9B9B;
       background: repeating-linear-gradient(-45deg, $gray 0, $gray 0.2rem, $key 0.2rem, $key 0.3rem);
     }
   }
 
   &.button-highlight::before {
     background-color: $pink;
+  }
+  &.button-secondary::before {
+    background-color: $blue;
   }
 
   &:hover:not(.button-disabled) {

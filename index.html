@@ -1,11 +1,5 @@
 ---
 layout: default
-redirect_from:
-  - /about-us
-  - /team
-  - /founders
-  - /portfolio-companies
-  - /contact-us
 ---
 
 <div id='container'>
@@ -17,25 +11,27 @@ redirect_from:
         {% include wordmark-seedplus.svg %}
         {% include wordmark-aws.svg %}
       </div>
-      <a class='button' href='#events'>Join in the fun</a>
+      <a class='button button-secondary' href='#events'>Join in the fun</a>
     </div>
   </section>
 
   <section>
     <div class='section-content'>
-      <h2>What's this?</h2>
-      
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget nisi at urna fringilla ornare maximus sed lectus. Praesent sed nulla scelerisque, egestas magna et, malesuada elit. Vestibulum rutrum libero non lacinia vestibulum. Nam id lacus et risus aliquet suscipit et in erat.</p>
-      <p>Vivamus pretium diam at porttitor vulputate. Maecenas vulputate hendrerit quam, sit amet vehicula justo lacinia eget. Donec interdum placerat tortor, non lobortis ligula scelerisque quis. Vestibulum sapien magna, feugiat ac est in, dictum volutpat ex.</p>
+      <h2>What's this all about?</h2>
+
+      <p>Launching a startup is difficult and your startup needs all the help it can get to get an edge on the competition. <a class='outbound'href="{{ site.data.urls.seedplus }}">SeedPlus</a>, Southeast Asia’s premier seed fund, and <a class='outbound' href='{{ site.data.urls.aws }}'>AWS</a>, the globally recognized cloud platform for startups, have teamed up to bring you <strong>Project Alpha</strong>.</p>
+      <p>2018 will see the launch of Project Alpha in Kuala Lumpur, Jakarta, Bangkok and Singapore. There will be a kick-off event in each city followed by an online registration so that you can submit your startup for consideration. SeedPlus and AWS will pick five startups from the submissions to receive:</p>
       <ul>
         <li>Access to business and technical experts from AWS and SeedPlus</li>
         <li>USD 25,000 Activate portfolio package from AWS</li>
         <li>Recognition in the market as one of the best early stage start-ups in ASEAN</li>
         <li>Potential seed round funding from SeedPlus</li>
       </ul>
+      <p>If you are interested in learning more and to meet SeedPlus and AWS – please be sure to register for the event in the city your startup is located. Seats at the event will be limited so be sure to register early. Don’t worry though – you can still <a class='outbound' href='{{ site.data.urls.submit_startup }}'>submit your startup</a> into Project Alpha even if you can’t make the event.</p>
+
       <div class='hbox'>
-        {% include wordmark-seedplus.svg %}
-        {% include wordmark-aws.svg %}
+        <a class='outbound' href='{{ site.data.urls.seedplus }}'>{% include wordmark-seedplus.svg %}</a>
+        <a class='outbound' href='{{ site.data.urls.aws }}'>{% include wordmark-aws.svg %}</a>
       </div>
     </div>
   </section>
@@ -55,6 +51,7 @@ redirect_from:
         <div class='hbox'>
         {% case event.state %}
         {% when 'tbd' %}
+          <a class='button button-secondary' href='/#notify'>Be the first to know</a>
         {% when 'upcoming' %}
           <a class='outbound button' href='{{ event.signup_url }}'>Attend the event</a>
           <div class='button button-disabled'>Submit pitch</div>
@@ -73,11 +70,27 @@ redirect_from:
       <div class='announcement'>
         <h2>Finalists announced</h2>
         <div class='subtitle'>29 October, right here</div>
-        <p>Post application, five start-ups from across the four cities will be shortlisted as finalists and recognised as one of the best early stage start-ups in ASEAN. These start-ups will be assigned two primary mentors for three months, one each from AWS and SeedPlus, and be given access to business and technical experts from AWS and SeedPlus.</p>
+        <p>Post application, at least five startups will be shortlisted as finalists and recognised as one of the best early stage start-ups in ASEAN. These start-ups will be assigned two primary mentors for three months – one each from AWS and SeedPlus – and be given access to business and technical experts from AWS and SeedPlus.</p>
+        <p>All finalists will be on-boarded to AWS and given a USD 25,000 Activate portfolio package. AWS will also provide mentorship on best practices for web architecture, security and advanced AWS services in AI/ML/KRADL/IoT.</p>
+        <p>A dedicated SeedPlus partner will work with the finalists on issues ranging from strategy and business development to product and recruitment to support the founders in building sustainable businesses. SeedPlus will also consider investing seed funding at the conclusion of the process.</p>
 
-        <p>All finalists will be on-boarded to AWS and given a USD 25,000 Activate portfolio package. AWS will also provide mentorship on well architected and SA best practices, security and AWS strategic services in AI / ML / KRADL / IOT topics.</p>
+        <h3 id='notify'>Want to get notified?</h3>
+        <p>We'll inform you of new event announcements, deadlines approaching and when finalists are unveiled.</p>
+        <!-- form class='hbox'>
+          <input type='email' placeholder='you@awesome.co' />
+          <a class='button' onclick='this.parentNode.submit()'>Stay updated</a>
+        </form -->
 
-        <p>The dedicated SeedPlus partner will work with the finalists on issues ranging from strategy and business development to product and recruitment to support the founders in building sustainable businesses. SeedPlus will also consider investing seed funding at the conclusion of the process.</p>
+        <form action="https://seedplus.us12.list-manage.com/subscribe/post?u=df792a67039d0fbce135f0405&amp;id=c30e1514e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_df792a67039d0fbce135f0405_c30e1514e3" tabindex="-1" value=""></div>
+        <div class="hbox">
+          <input type="checkbox" value="1" name="group[16469][1]" id="mce-group[16469]-16469-0" onclick="document.getElementById('submit_button').classList.toggle('button-disabled')"><label for="mce-group[16469]-16469-0">I have read and agree to the <a href='{{ side.data.urls.terms_and_conditions }}'>Terms and Conditions.</a></label>
+        </div>
+        <div class="hbox">
+          <input required type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder='you@awesome.co'>
+          <a class='button button-disabled' id='submit_button' onclick="if (!this.classList.contains('button-disabled')) document.getElementById('mc-embedded-subscribe-form').submit()">Stay updated</a>
+        </div>
+        </form>
       </div>
     </div>
   </section>
@@ -85,17 +98,28 @@ redirect_from:
   <section>
     <div class='section-content'>
       <h2>How to pitch</h2>
-      <p>Vivamus pretium diam at porttitor vulputate. Maecenas vulputate hendrerit quam, sit amet vehicula justo lacinia eget. Donec interdum placerat tortor, non lobortis ligula scelerisque quis. Vestibulum sapien magna, feugiat ac est in, dictum volutpat ex.</p>
-      <p>There's also some very objective eligibility criteria:</p>
+
+      <p>Fill out the form and submit your five-page pitch deck – simple as that. The template highlights all the relevant information we are looking for but feel free to add anything that would help us get to know your team, your company or your market better. We promise to review each and every deck but we will only be following up to ask further questions or to let you know you have been selected for the next round.</p>
+      <p>There're also some very objective eligibility criteria:</p>
       <ul>
-        <li>HQ or main operations must be in a Project Alpha city</li>
-        <li>Raised a maximum of US$XXX before</li>
+        <li>HQ or main operations must be in a Project Alpha city (i.e. Kuala Lumpur, Bangkok, Jakarta, Singapore)</li>
+        <li>Previously raised no more than US$ 250,000 in start-up funding</li>
         <li>Submit a 5 page PDF deck in English using the provided pitch deck template.</li>
         <li>All applications submitted after the closing date will not be reviewed.</li>
       </ul>
+
       <div class='hbox'>
-        <a class='outbound button' href='https://docs.google.com/presentation/d/1bFMEVYBphQ_ZYSHdiFxHCLJ3ACE_lM8LS7okv2sRiTg'>Download template</a>
-        <a class='outbound button button-highlight' href='https://airtable.com/shrSu9BbRGjGAPLYz'>Submit pitch deck</a>
+        <a class='outbound button button-secondary' href='https://docs.google.com/presentation/d/1bFMEVYBphQ_ZYSHdiFxHCLJ3ACE_lM8LS7okv2sRiTg'>Download template</a>
+        <a class='outbound button button-highlight' href='{{ submit_startup }}'>Submit pitch deck</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class='section-content'>
+      <div class='hbox'>
+        <p>For questions, comments, press inquiries, or to say hi.</p>
+        <a class='outbound button' href='mailto:projectalpha@seedplus.com'>Contact the organizers</a>
       </div>
     </div>
   </section>
