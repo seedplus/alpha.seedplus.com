@@ -39,7 +39,7 @@ layout: default
   <section>
     <div class='section-content section-events' id='events'>
       {% for event in site.events %}
-      <div class='event{% if event.state == 'tbd' %} event-small{% endif %}'>
+      <div class='event'>
         <div class='image' style='background-image: url({{ event.image | prepend: '/assets/' }});'></div>
         <h2>{{ event.name }}</h2>
         {% if event.state == 'tbd' %}
@@ -76,16 +76,14 @@ layout: default
 
         <h3 id='notify'>Want to get notified?</h3>
         <p>We'll inform you of new event announcements, deadlines approaching and when finalists are unveiled.</p>
-        <!-- form class='hbox'>
-          <input type='email' placeholder='you@awesome.co' />
-          <a class='button' onclick='this.parentNode.submit()'>Stay updated</a>
-        </form -->
 
         <form action="https://seedplus.us12.list-manage.com/subscribe/post?u=df792a67039d0fbce135f0405&amp;id=c30e1514e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_df792a67039d0fbce135f0405_c30e1514e3" tabindex="-1" value=""></div>
-        <div class="hbox">
-          <input type="checkbox" value="1" name="group[16469][1]" id="mce-group[16469]-16469-0" onclick="document.getElementById('submit_button').classList.toggle('button-disabled')"><label for="mce-group[16469]-16469-0">I have read and agree to the <a href='{{ side.data.urls.terms_and_conditions }}'>Terms and Conditions.</a></label>
-        </div>
+        <p class='center'>
+          <input type="checkbox" value="1" name="group[16469][1]" id="mce-group[16469]-16469-0" onclick="document.getElementById('submit_button').classList.toggle('button-disabled')">
+          <label for="mce-group[16469]-16469-0">I have read and agree to the <a href='{{ site.data.urls.terms_and_conditions }}'>Terms and Conditions.</a></label>
+        </p>
+        </span>
         <div class="hbox">
           <input required type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder='you@awesome.co'>
           <a class='button button-disabled' id='submit_button' onclick="if (!this.classList.contains('button-disabled')) document.getElementById('mc-embedded-subscribe-form').submit()">Stay updated</a>
@@ -117,8 +115,8 @@ layout: default
 
   <section>
     <div class='section-content'>
+      <p class='center'>For questions, comments, press inquiries, or to say hi.</p>
       <div class='hbox'>
-        <p>For questions, comments, press inquiries, or to say hi.</p>
         <a class='outbound button' href='mailto:projectalpha@seedplus.com'>Contact the organizers</a>
       </div>
     </div>
