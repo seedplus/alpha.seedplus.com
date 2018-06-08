@@ -9,7 +9,7 @@
 title: Project Alpha
 email: hello@seedplus.com
 description: > # this means to ignore newlines until "baseurl:"
-  Powering the next breakout story in South East Asia
+  Powering the next breakout story in South East Asia, by AWS and SeedPlus
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://alpha.seedplus.com" # the base hostname & protocol for your site
 linkedin-url: "https://www.linkedin.com/company/seedplus"
