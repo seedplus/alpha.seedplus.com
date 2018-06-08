@@ -4,5 +4,5 @@ aws: https://aws.amazon.com/
 register_event: https://projectalpha-my-public.splashthat.com/
 submit_startup: https://projectalpha-my-startup.splashthat.com/
 
-terms_and_conditions: https://aws.amazon.com/terms/
+terms_and_conditions: /termsandconditions
 template_deck: /assets/template.pptx
