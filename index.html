@@ -86,7 +86,7 @@ layout: default
         </span>
         <div class="hbox">
           <input required type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder='you@awesome.co'>
-          <a class='button button-disabled' id='submit_button' onclick="if (!this.classList.contains('button-disabled')) document.getElementById('mc-embedded-subscribe-form').submit()">Stay updated</a>
+          <a class='button button-disabled' id='submit_button' onclick="fbq('track', 'Lead'); fbq('track', 'ViewContent', {content_ids: 'mailchimp signup'}); if (!this.classList.contains('button-disabled')) document.getElementById('mc-embedded-subscribe-form').submit()">Stay updated</a>
         </div>
         </form>
       </div>
