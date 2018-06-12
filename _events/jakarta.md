@@ -7,4 +7,4 @@ address: |-
   Be early on the train
 state: tbd
 submission_url: https://airtable.com/shrSu9BbRGjGAPLYz?prefill_City=Jakarta
---- 
+---

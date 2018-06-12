@@ -39,7 +39,7 @@ layout: default
   <section>
     <div class='section-content section-events' id='events'>
       {% for event in site.events %}
-      <div class='event'>
+      <div class='event{% if event.state == 'tbd' %} event-tbd{% endif %}'>
         <div class='image' style='background-image: url({{ event.image | prepend: '/assets/' }});'></div>
         <h2>{{ event.name }}</h2>
         {% if event.state == 'tbd' %}
@@ -53,7 +53,7 @@ layout: default
         {% when 'tbd' %}
           <a class='button button-secondary' href='/#notify'>Be the first to know</a>
         {% when 'upcoming' %}
-          <a class='outbound button' href='{{ event.signup_url }}'>Attend the event</a>
+          <a class='outbound button button-highlight' href='{{ event.signup_url }}'>Attend the event</a>
           <div class='button button-disabled'>Submit pitch</div>
         {% when 'submitting' %}
           <div class='button button-disabled'>Attend the event</div>
@@ -86,7 +86,7 @@ layout: default
         </span>
         <div class="hbox">
           <input required type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder='you@awesome.co'>
-          <a class='button button-disabled' id='submit_button' onclick="fbq('track', 'Lead'); fbq('track', 'ViewContent', {content_ids: 'mailchimp signup'}); if (!this.classList.contains('button-disabled')) document.getElementById('mc-embedded-subscribe-form').submit()">Stay updated</a>
+          <a class='button button-disabled' id='submit_button' onclick="ga('send', 'event', {eventCategory: 'emailsignup', eventAction: 'click',transport: 'beacon'}); fbq('track', 'Lead'); fbq('track', 'ViewContent', {content_ids: 'mailchimp signup'}); if (!this.classList.contains('button-disabled')) document.getElementById('mc-embedded-subscribe-form').submit()">Stay updated</a>
         </div>
         </form>
       </div>

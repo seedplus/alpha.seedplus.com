@@ -13,6 +13,7 @@ $key: {{ site.data.visuals.colors.key }};
 $gray: #9B9B9B;
 
 $breakpoint: 570px; //767px;
+$column-breakpoint: 769px;
 $page-bg-breakpoint: 1080px;
 
 $content-width: 570px;
@@ -134,13 +135,10 @@ div.section-content.section-events {
   flex-flow: row wrap;
   justify-content: center;
   padding: 0;
-  //flex: 0 1 calc(#{$content-width} + 4rem);
-  $events-width: $page-bg-breakpoint;
-  //$events-width: $content-width;
-  flex: 0 1 $events-width;
+  flex: 0 1 auto;
 
   div.event {
-    flex: 1 1 $events-width/2;
+    flex: 1 1 $column-breakpoint/2;
     display: flex;
     flex-flow: column nowrap;
     margin-top: 1rem;
@@ -152,6 +150,13 @@ div.section-content.section-events {
       padding-bottom: 100%;
       background-size: 100%;
       background-position: center;
+    }
+    &.event-tbd > div.image {
+      filter: grayscale(100%);
+      opacity: 0.5;
+    }
+    &.event-tbd .button-secondary::before {
+      background-color: $gray;
     }
     h1, h2, h3, h4, .subtitle, p, div.hbox {
       text-align: left;
