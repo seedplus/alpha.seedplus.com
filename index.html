@@ -24,7 +24,7 @@ layout: default
       <ul>
         <li>Access to business and technical experts from AWS and SeedPlus</li>
         <li>USD 25,000 Activate portfolio package from AWS</li>
-        <li>Recognition in the market as one of the best early stage start-ups in ASEAN</li>
+        <li>Market recognition from AWS and SeedPlus as a high-growth, high-potential ASEAN startup</li>
         <li>Potential seed round funding from SeedPlus</li>
       </ul>
       <p>If you are interested in learning more and to meet SeedPlus and AWS – please be sure to register for the event in the city your startup is located. Seats at the event will be limited so be sure to register early. Don’t worry though – you can still <a class='outbound' href='{{ site.data.urls.submit_startup }}'>submit your startup</a> into Project Alpha even if you can’t make the event.</p>
@@ -54,7 +54,7 @@ layout: default
           <a class='button button-secondary' href='/#notify'>Be the first to know</a>
         {% when 'upcoming' %}
           <a class='outbound button button-highlight' href='{{ event.signup_url }}'>Attend the event</a>
-          <div class='button button-disabled'>Submit pitch</div>
+          <a class='outbound button' href='{{ event.submission_url }}'>Submit pitch</a>
         {% when 'submitting' %}
           <div class='button button-disabled'>Attend the event</div>
           <a class='outbound button button-highlight' href='{{ event.submission_url }}'>Submit pitch</a>
