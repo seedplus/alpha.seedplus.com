@@ -1,8 +1,8 @@
 seedplus: http://www.seedplus.com/
 aws: https://aws.amazon.com/
 # Note: these are also on individual pages 
-register_event: https://projectalpha-my-public.splashthat.com/
-submit_startup: https://projectalpha-my-startup.splashthat.com/
+register_event: https://projectalphamalaysia.splashthat.com
+submit_startup: https://projectalphamalaysiastartups.splashthat.com
 
 terms_and_conditions: /termsandconditions
 template_deck: /assets/template.pptx

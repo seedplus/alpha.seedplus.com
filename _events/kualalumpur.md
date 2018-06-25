@@ -4,8 +4,8 @@ name: Kuala Lumpur
 date: 2018-07-05
 venue: Common Ground, TTDI
 state: upcoming
-signup_url: https://projectalpha-my-public.splashthat.com/
-submission_url: https://projectalpha-my-startup.splashthat.com/
+signup_url: https://projectalphamalaysia.splashthat.com
+submission_url: https://projectalphamalaysiastartups.splashthat.com
 --- 
 
 The inaugural Project Alpha event will be held 2-5 PM at 
