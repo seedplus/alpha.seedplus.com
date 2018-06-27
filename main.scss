@@ -181,6 +181,10 @@ div.section-content.section-events {
     margin-top: 1rem;
     color: white;
     background-color: $purple;
+    h2 {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
   }
 
   counter-reset: event 0;
