@@ -142,7 +142,7 @@ div.section-content.section-events {
     display: flex;
     flex-flow: column nowrap;
     margin-top: 1rem;
-    align-items: flex-start;
+    align-items: stretch;
 
     & > div.image {
       align-self: stretch;
