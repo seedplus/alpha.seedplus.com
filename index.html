@@ -72,7 +72,11 @@ layout: default
           <a class='button button-secondary' href='/#notify'>Be the first to know</a>
         {% when 'upcoming' %}
           <a class='outbound button button-highlight' href='{{ event.signup_url }}'>Attend the event</a>
-          <a class='outbound button' href='{{ event.submission_url }}'>Submit pitch</a>
+          {% if event.submission_url %}
+            <a class='outbound button' href='{{ event.submission_url }}'>Submit pitch</a>
+          {% else %}
+            <div class='button button-disabled'>Submit pitch</div>
+          {% endif %}
         {% when 'submitting' %}
           <div class='button button-disabled'>Attend the event</div>
           <a class='outbound button button-highlight' href='{{ event.submission_url }}'>Submit pitch</a>
