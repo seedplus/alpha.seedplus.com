@@ -165,19 +165,25 @@ div.section-content.section-events {
     div.hbox {
       align-self: stretch;
     }
-    img.two {
+    a.two {
       float: left;
       width: calc(50% - 4rem);
       margin: 1rem 2rem;
       width: calc(50% - 10vw);
       margin: 1rem 5vw;
+      &:nth-of-type(2n+1) {
+        clear: left;
+      }
     }
-    img.three {
+    a.three {
       float: left;
       width: calc(33% - 4rem);
       margin: 1rem 2rem;
       width: calc(33% - 4vw);
       margin: 1rem 2vw;
+      &:nth-of-type(3n+2) {
+        clear: left;
+      }
     }
   }
 
