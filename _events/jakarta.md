@@ -4,7 +4,7 @@ name: Jakarta
 date: 2018-08-09
 venue: Go-Jek HQ
 state: upcoming
-signup_url: https://airtable.com/shrtK2iXnYVoxRMDx?prefill_City=Jakarta
+signup_url: https://projectalphajakarta.splashthat.com/
 ---
 
 The next stop of the Project Alpha roadshow is hosted with Indonesia’s first unicorn startup [GO-JEK](https://www.go-jek.com/). GO-JEK and [GO-LIFE](https://www.go-jek.com/go-life/) speakers will be participating in the event, alongside rising stars [Bizzy](https://www.bizzy.co.id/) and [Modalku](https://modalku.co.id/). Sign up to join us from **1-4PM** at
