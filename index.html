@@ -11,7 +11,7 @@ layout: default
         {% include wordmark-seedplus.svg %}
         {% include wordmark-aws.svg %}
       </div>
-      <a class='button button-secondary' href='#events'>Join in the fun</a>
+      <a class='button button-secondary' href='#events'>Next stop: {{ site.events | where: "state", "upcoming" | map: "name" | first }}</a>
     </div>
   </section>
 
