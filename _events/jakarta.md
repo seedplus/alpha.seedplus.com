@@ -3,7 +3,7 @@ image: jakarta.svg
 name: Jakarta
 date: 2018-08-09
 venue: Go-Jek HQ
-state: submitting
+state: over
 signup_url: https://projectalphajakarta.splashthat.com/
 submission_url: https://projectalphajakartastartups.splashthat.com/
 ---
