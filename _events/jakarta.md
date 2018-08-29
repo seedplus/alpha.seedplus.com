@@ -12,7 +12,7 @@ The second stop of the Project Alpha roadshow was hosted with Indonesia’s firs
 
 [![GoJek](/assets/wordmark-gojek.svg)](https://www.go-jek.com/){: .two}
 [![GoLife](/assets/wordmark-golife.svg)](https://www.go-jek.com/go-life/){: .two}
-[![Bizzy](/assets/wordmark-bizzi.svg)](https://www.bizzy.co.id/){: .two}
+[![Bizzy](/assets/wordmark-bizzi.svg)](https://www.bizzy.co.id/){: .two .clear}
 [![Modalku](/assets/wordmark-modalku.svg)](https://modalku.co.id/){: .two}
 
 Submission for Jakarta-based startups closed on 23 August.
