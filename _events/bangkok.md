@@ -19,8 +19,8 @@ Bangkok 10120
 
 [![Pomelo](/assets/wordmark-pomelo.svg)](https://www.pomelofashion.com/){: .two}
 [![2C2P](/assets/wordmark-2c2p.svg)](https://www.2c2p.com){: .two}
-[![True Digital Park](/assets/wordmark-truedigitalpark.svg)](http://www.truedigitalpark.com/){: .three .clear}
-[![HUBBA](/assets/wordmark-hubba.svg)](http://www.hubbathailand.com/){: .three}
-[![Techsauce](/assets/wordmark-techsauce.svg)](https://techsauce.co/){: .three}
+[![True Digital Park](/assets/wordmark-truedigitalpark.svg)](http://www.truedigitalpark.com/){: .two .clear}
+[![HUBBA](/assets/wordmark-hubba.svg)](http://www.hubbathailand.com/){: .four}
+[![Techsauce](/assets/wordmark-techsauce.svg)](https://techsauce.co/){: .four}
 
 Submission for Bangkok-based startups will close on 20 September.
