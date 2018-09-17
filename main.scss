@@ -165,6 +165,15 @@ div.section-content.section-events {
     div.hbox {
       align-self: stretch;
     }
+    a.two, a.three, a.four {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 3rem;
+      img {
+        vertical-align: middle;
+      }
+    }
     a.two {
       float: left;
       width: 30%;
