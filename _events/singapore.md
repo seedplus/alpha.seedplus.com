@@ -5,6 +5,7 @@ date: 2018-10-02
 venue: AWS HQ
 state: upcoming
 signup_url: https://projectalphasingapore.splashthat.com/
+submission_url: https://projectalphasingaporestartups.splashthat.com/
 --- 
 
 The final stop for Project Alpha in 2018 will be in Singapore, where AWS will host **Gillian Tee**, CEO of rising star [Homage](https://www.homage.sg/), **K1 Suzuki**, Head of Technology at [Grab Ventures](https://ventures.grab.com/), and **Agung Nugroho**, Co-Founder and COO of [Kudo](https://kudo.co.id/) (now part of Grab). Sign up to get inspired by their journeys, and join us between **1-4PM** at:
