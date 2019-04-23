@@ -15,4 +15,4 @@ The second stop of the Project Alpha roadshow was hosted with Indonesia’s firs
 [![Bizzy](/assets/wordmark-bizzi.svg)](https://www.bizzy.co.id/){: .two .clear}
 [![Modalku](/assets/wordmark-modalku.svg)](https://modalku.co.id/){: .two}
 
-Submission for Jakarta-based startups closed on 23 August.
+Submission for Jakarta-based startups closed on 23 August 2018.

@@ -13,4 +13,4 @@ The inaugural Project Alpha event was held at Common Ground TTDI. Joining speake
 [![Fave](/assets/wordmark-fave.svg)](https://www.myfave.com/){: .two}
 [![iFlix](/assets/wordmark-iflix.svg)](https://www.iflix.com/){: .two}
 
-Submission for Kuala Lumpur-based startups closed on 19 July.
+Submission for Kuala Lumpur-based startups closed on 19 July 2018.

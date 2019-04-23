@@ -14,4 +14,4 @@ The final stop for Project Alpha in 2018 was in Singapore, where AWS hosted **Gi
 [![Grab](/assets/wordmark-grab.svg)](https://www.grab.com/){: .three}
 [![Kudo](/assets/wordmark-kudo.svg)](https://kudo.co.id/){: .three}
 
-Submission for Singapore-based startups closed on 16 October.
+Submission for Singapore-based startups closed on 16 October 2018.

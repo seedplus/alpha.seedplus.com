@@ -18,4 +18,4 @@ Joining speakers from SeedPlus and AWS were **David Jou**, CEO of [Pomelo](https
 [![HUBBA](/assets/wordmark-hubba.svg)](http://www.hubbathailand.com/){: .four}
 [![Techsauce](/assets/wordmark-techsauce.svg)](https://techsauce.co/){: .four}
 
-Submission for Bangkok-based startups closed on 20 September.
+Submission for Bangkok-based startups closed on 20 September 2018.

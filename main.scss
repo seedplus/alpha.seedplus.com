@@ -95,6 +95,21 @@ h3, .subtitle {
 input[type="email"] {
   letter-spacing: 0.15em;
 }
+p.fineprint {
+  font-size: 0.6rem;
+}
+th {
+  font-size: 1.8rem;
+  padding-right: 1rem;
+  a {
+    text-decoration: none;
+    &::after {
+      content: "\25B6\fe0e";
+      font-size: 1rem;
+      margin-left: 0.2rem;
+    }
+  }
+}
 
 #container {
   display: flex;
@@ -220,12 +235,13 @@ div.section-content.section-events {
       align-self: stretch;
       flex: 0 0 auto;
       padding-bottom: 100%;
-      background-size: 100%;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
     }
     &.event-tbd > div.image {
-      filter: grayscale(100%);
-      opacity: 0.5;
+      //filter: grayscale(100%);
+      //opacity: 0.5;
     }
     &.event-tbd .button-secondary::before {
       background-color: $gray;
@@ -266,8 +282,21 @@ div.section-content.section-events {
     }
   }
 
+  div.announcement {
+    margin: 1rem 0;
+    padding: 2rem;
+    flex: 0 1 $content-width;
+    margin-top: 1rem;
+    color: white;
+    background-color: $purple;
+    h2 {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+
   counter-reset: event 0;
-  div.event {
+  div.event, div.announcement {
     list-style-type: none;
     position: relative;
     &::before {
@@ -293,6 +322,9 @@ div.section-content.section-events {
 
 section:nth-of-type(2) > div.section-content {
   background: $blue;
+}
+section:nth-of-type(3) > div.section-content {
+  background: $yellow;
 }
 section:nth-last-of-type(2) > div.section-content {
   background: $yellow;
