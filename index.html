@@ -60,7 +60,7 @@ layout: default
         <li>Potential seed round funding from SeedPlus</li>
       </ul>
       <p>If you are interested in learning more and to meet SeedPlus and AWS – please be sure to register for the event in the city your startup is located!</p>
-      <p class='fineprint'>Seats at the event will be limited so be sure to register early. Don’t worry though – you can still <a class='outbound' href='{{ site.data.urls.submit_startup }}'>submit your startup</a> into Project Alpha even if you can’t make the event.</p>
+      <p class='fineprint'>Seats at the event will be limited so be sure to register early. Don’t worry though – you can still submit your startup into Project Alpha even if you can’t make the event.</p>
       <h3>See our legacy</h3>
       <table>
         <tr><th><a href='/2018/'>2018</a></th><td>saw the launch of Project Alpha in <a href='#kuala-lumpur'>Kuala Lumpur</a>, <a href='#jakarta'>Jakarta</a>, <a href='#bangkok'>Bangkok</a> and <a href='#singapore'>Singapore</a></td></tr>
@@ -90,7 +90,11 @@ layout: default
         {% when 'tbd' %}
           <a class='button button-secondary' href='/#notify'>Be the first to know</a>
         {% when 'upcoming' %}
-          <a class='outbound button button-highlight' href='{{ event.signup_url }}'>Attend the event</a>
+          {% if event.signup_url %}
+            <a class='outbound button button-highlight' href='{{ event.signup_url }}'>Attend the event</a>
+          {% else %}
+            <div class='button button-disabled'>Attend the event</div>
+          {% endif %}
           {% if event.submission_url %}
             <a class='outbound button' href='{{ event.submission_url }}'>Submit pitch</a>
           {% else %}
@@ -111,7 +115,7 @@ layout: default
 
       <div class='announcement'>
         <h2>Finalists announced</h2>
-        <div class='subtitle'>29 October, right here</div>
+        <div class='subtitle'>Mid-November, right here</div>
         <p>Post application, at least six startups will be shortlisted as finalists and recognised as one of the best early stage start-ups in ASEAN. These start-ups will be assigned two primary mentors for three months – one each from AWS and SeedPlus – and be given access to business and technical experts from AWS and SeedPlus.</p>
         <p>All finalists will be on-boarded to AWS and given a USD 25,000 Activate portfolio package. AWS will also provide mentorship on best practices for web architecture, security and advanced AWS service usage for AI/ML, analytics and IoT.</p>
         <p>A dedicated SeedPlus partner will work with the finalists on issues ranging from strategy and business development to product and recruitment, and support the shortlisted founders in building sustainable businesses. SeedPlus will also consider investing seed funding at the conclusion of the process.</p>
@@ -148,9 +152,15 @@ layout: default
         <li>All applications submitted after the closing date will not be reviewed.</li>
       </ul>
       <p>We promise to review each and every deck but we will only be following up to ask further questions or to let you know you have been selected for the next round.</p>
+
+      {% assign nextsubmit = site.events | where: "state", "submitting" | first %}
       <div class='hbox'>
         <a class='outbound button button-secondary' href='{{ site.data.urls.template_deck }}'>Download template</a>
-        <div class='button button-disabled'>Submit pitch deck</div>
+        {% if nextsubmit %}
+          <a class='outbound button' href='{{ nextsubmit.submission_url }}'>Submit pitch deck</a>
+        {% else %}
+          <div class='button button-disabled'>Submit pitch deck</div>
+        {% endif %}
       </div>
     </div>
   </section>
