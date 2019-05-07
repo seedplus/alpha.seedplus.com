@@ -154,6 +154,9 @@ layout: default
       <p>We promise to review each and every deck but we will only be following up to ask further questions or to let you know you have been selected for the next round.</p>
 
       {% assign nextsubmit = site.events | where: "state", "submitting" | first %}
+      {% unless nextsubmit %}
+        {% assign nextsubmit = site.events | where: "state", "upcoming" | where_exp: "event", "event.submission_url" | first %}
+      {% endunless %}
       <div class='hbox'>
         <a class='outbound button button-secondary' href='{{ site.data.urls.template_deck }}'>Download template</a>
         {% if nextsubmit %}

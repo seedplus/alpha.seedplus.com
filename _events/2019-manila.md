@@ -5,6 +5,7 @@ date: 2019-05-28
 venue: Kickstart@Paseo
 state: upcoming
 signup_url: https://kickstart.doorkeeper.jp/events/91296
+submission_url: https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Manila
 ---
 
 Kicking off the 2019 season of Project Alpha is a new destination: Manila, where Kickstart Ventures will host the inaugural event.
