@@ -3,7 +3,7 @@ image: manila.svg
 name: Manila
 date: 2019-05-28
 venue: Kickstart@Paseo
-state: submitting
+state: over
 signup_url: https://kickstart.doorkeeper.jp/events/91296
 submission_url: https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Manila
 ---
@@ -16,4 +16,4 @@ Joining speakers from AWS and SeedPlus were luminaries **Ron Hose**, Founder and
 [![Coins.ph](/assets/wordmark-coins.svg)](https://coins.ph/){: .three}
 [![Neuron Mobility](/assets/wordmark-neuron.png)](https://www.neuron.sg/){: .three}
 
-Submission for Manila-based startups will close on 11 June 2019.
+Submission for Manila-based startups closed on 11 June 2019.
