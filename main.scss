@@ -347,7 +347,17 @@ $hero-h: 1080px;
     margin-top: 1rem;
   }
 }
-  
+
+div.partnerbox {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20%;
+  p {
+    text-align: center
+  }
+}
 
 div.infobox {
   flex: 1 1 0;
@@ -365,6 +375,9 @@ div.infobox {
 }
 svg.logo {
   fill: $key;
+}
+a.partner {
+  width: 100%;
 }
 svg.x {
   flex: 0 1 3rem;
