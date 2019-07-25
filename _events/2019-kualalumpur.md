@@ -13,6 +13,6 @@ Project Alpha is also coming back to Kuala Lumpur! AWS and SeedPlus welcomes hom
 [![Lapasar](/assets/wordmark-lapasar.svg)](https://lapasar.com/){: .four}
 [![AVANA](/assets/wordmark-avana.svg)](https://avana.asia/){: .four}
 [![FAVE](/assets/wordmark-fave.svg)](https://myfave.com){: .four}
-[![CG](/assets/logo-common-ground.png)](https://www.commonground.work){: .four}
+[![CG](/assets/logo_CG.png)](https://www.commonground.work){: .four}
 
 Submissions for Kuala Lumpur will close on 9 September 2019.
