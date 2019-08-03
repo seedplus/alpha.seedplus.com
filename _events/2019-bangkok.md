@@ -3,7 +3,7 @@ image: bangkok.svg
 name: Bangkok
 date: 2019-07-18
 venue: True Digital Park
-state: submitting
+state: over
 signup_url: "https://airtable.com/shriI6fCGIyzNTkv0?prefill_City=Bangkok"
 submission_url: "https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Bangkok"
 ---
@@ -15,4 +15,4 @@ Next up on the road show was Bangkok, where we were hosted by **True Digital Par
 [![OneStockHome](/assets/wordmark-onestockhome.svg)](https://www.onestockhome.com/){: .two .clear}
 [![Panya Studios](/assets/wordmark-panyastudios.svg)](https://panyastudios.com/){: .two}
 
-Submissions for Bangkok will close on 1 August 2019.
+Submissions for Bangkok closed on 1 August 2019.
