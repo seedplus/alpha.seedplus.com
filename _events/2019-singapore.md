@@ -1,6 +1,6 @@
 ---
 image: singapore.svg
 name: Singapore
-date: 2019-10-31
+date: 2019-09-26
 state: tbd
 ---
