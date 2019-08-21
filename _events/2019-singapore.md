@@ -8,7 +8,7 @@ signup_url: "https://airtable.com/shriI6fCGIyzNTkv0?prefill_City=Singapore"
 submission_url: "https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Singapore"
 ---
 
-Project Alpha is also coming back to Singapore! AWS and SeedPlus welcomes **Tee-Ming Chew **, co-founder of [Seedly](https://seedly.sg) and **Altaf Dhamani**, CPO and co-founder of SeedPlus portfolio company - [Travelstop](https://travelstop.com) . The event starts at 6PM - don't miss it!
+Project Alpha is also coming back to Singapore! AWS and SeedPlus welcomes **Tee-Ming Chew**, co-founder of [Seedly](https://seedly.sg) and **Altaf Dhamani**, CPO and co-founder of SeedPlus portfolio company - [Travelstop](https://travelstop.com) . The event starts at 6PM - don't miss it!
 
 [![Seedly](/assets/logo-seedly.svg)](https://seedly.sg){: .three}
 [![Travelstop](/assets/logo-travelstop.svg)](https://travelstop.com){: .three}
