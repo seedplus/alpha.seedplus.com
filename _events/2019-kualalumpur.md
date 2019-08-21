@@ -2,7 +2,7 @@
 image: kualalumpur.svg
 name: Kuala Lumpur
 date: 2019-08-26
-state: over
+state: submitting
 venue: Common Ground KL Eco City
 signup_url: "https://airtable.com/shriI6fCGIyzNTkv0?prefill_City=Kuala Lumpur"
 submission_url: "https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Kuala Lumpur"
