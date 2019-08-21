@@ -12,7 +12,7 @@ Project Alpha is also coming back to Singapore! AWS and SeedPlus welcomes **Tee-
 
 [![Seedly](/assets/logo-seedly.svg)](https://seedly.sg){: .two}
 [![Travelstop](/assets/logo-travelstop.svg)](https://travelstop.com){: .two}
-[![WeWork](/assets/wordmark-wework.svg)]( https://www.wework.com/en-GB/buildings/60-anson-rd--singapore){: .one}
+[![WeWork](/assets/wordmark-wework.svg)]( https://www.wework.com/en-GB/buildings/60-anson-rd--singapore){: .one .clear}
 
 Submissions for Singapore will close on 10 October 2019.
 ---
