@@ -2,9 +2,9 @@
 image: singapore.svg
 name: Singapore
 date: 2019-09-26
-state: upcoming
+state: submitting
 venue: WeWork 60 Anson Road
-signup_url: "https://airtable.com/shriI6fCGIyzNTkv0?prefill_City=Singapore"
+signup_url: ""
 submission_url: "https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Singapore"
 ---
 
