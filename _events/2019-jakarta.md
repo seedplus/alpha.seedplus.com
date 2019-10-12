@@ -4,7 +4,7 @@ name: Jakarta
 date: 2019-10-10
 state: upcoming
 venue: AWS Jakarta Pop-up Loft
-signup_url: "https://airtable.com/shriI6fCGIyzNTkv0?prefill_City=Jakarta"
+signup_url: ""
 submission_url: "https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Jakarta"
 ---
 
