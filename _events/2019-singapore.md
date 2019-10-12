@@ -2,7 +2,7 @@
 image: singapore.svg
 name: Singapore
 date: 2019-09-26
-state: submitting
+state: over
 venue: WeWork 60 Anson Road
 signup_url: ""
 submission_url: ""

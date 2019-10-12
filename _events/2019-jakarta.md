@@ -2,7 +2,7 @@
 image: jakarta.svg
 name: Jakarta
 date: 2019-10-10
-state: upcoming
+state: submitting
 venue: AWS Jakarta Pop-up Loft
 signup_url: ""
 submission_url: "https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Jakarta"
