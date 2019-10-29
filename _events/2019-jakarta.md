@@ -5,7 +5,7 @@ date: 2019-10-10
 state: submitting
 venue: AWS Jakarta Pop-up Loft
 signup_url: ""
-submission_url: "https://airtable.com/shr4Mc488yDvhgYFY?prefill_City=Jakarta"
+submission_url: ""
 ---
 
 The final destination for Project Alpha will be in Jakarta at the new [AWS Jakarta Pop-up loft](https://aws.amazon.com/start-ups/loft/jakarta/). AWS and SeedPlus welcome:  **Sabrina Soewatdy**, Co-founder of [Rukita](https://www.rukita.co/) & **Harshet Lunani**, CEO and co-founder of [Qoala](https://www.qoala.id/) & **Christian Sutardi**, COO and co-founder of [Fabelio](https://fabelio.com/) .
