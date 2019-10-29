@@ -2,7 +2,7 @@
 image: jakarta.svg
 name: Jakarta
 date: 2019-10-10
-state: submitting
+state: over
 venue: AWS Jakarta Pop-up Loft
 signup_url: ""
 submission_url: ""
